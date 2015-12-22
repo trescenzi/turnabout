@@ -10,7 +10,11 @@
         "https://hearthstone.tappedout.net/*",
         "http://hearthstone.tappedout.net/*"
       ],
-      "js": ["jquery-2.1.4.min.js", "lodash.min.js", "dist/turnabout.js"]
+      "js": [
+        "bower_components/jquery/dist/jquery.min.js", 
+        "bower_components/lodash/lodash.min.js", 
+        "dist/turnabout.js"
+      ]
     }
   ]
 }

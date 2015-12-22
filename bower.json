@@ -1,0 +1,21 @@
+{
+  "name": "turnabout",
+  "homepage": "https://github.com/trescenzi/turnabout",
+  "description": "The best way to untap",
+  "authors": [
+    "trescenzi"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "lodash": "~3.10.1",
+    "jquery": "~2.1.4"
+  }
+}
