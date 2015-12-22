@@ -19,7 +19,7 @@ function getCardCount(cardList: string[]) {
 }
 
 function updateMainTab(cardCount: number) {
-  mainTab.text('Main: ' + cardCount);
+  mainTab.text('Mainboard: ' + cardCount);
 }
 
 updateMainTab(getCardCount(getMainboardText()));
