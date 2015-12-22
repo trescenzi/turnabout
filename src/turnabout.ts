@@ -1,10 +1,16 @@
 /// <reference path="../typings/tsd.d.ts" />
 var mainboard = $('textarea#id_mainboard');
 var mainTab = $('label[for="id_mainboard"]');
+var sideboard = $('textarea#id_sideboard');
+var sideTab = $('label[for="id_sideboard"]');
+var maybeboard = $('textarea#id_maybeboard');
+var maybeTab = $('label[for="id_maybeboard"]');
+var acquireboard = $('textarea#id_acquireboard');
+var acquireTab = $('label[for="id_acquireboard"]');
 var CARD_REGEX = /(\d?).*/;
 
-function getMainboardText() {
-  return _.map(mainboard.val().split('\n'), _.trim);
+function getBoardText(board: JQuery) {
+  return _.map(board.val().split('\n'), _.trim);
 }
 
 function getCardCount(cardList: string[]) {
@@ -18,12 +24,27 @@ function getCardCount(cardList: string[]) {
   }, 0);
 }
 
-function updateMainTab(cardCount: number) {
-  mainTab.text('Mainboard: ' + cardCount);
+function updateTab(tab: JQuery, tabName: string, cardCount: number) {
+  tab.text(tabName + ': ' + cardCount);
 }
 
-updateMainTab(getCardCount(getMainboardText()));
+updateTab(mainTab, 'Mainboard', getCardCount(getBoardText(mainboard)));
+updateTab(sideTab, 'Sideboard', getCardCount(getBoardText(sideboard)));
+updateTab(maybeTab, 'Maybeboard', getCardCount(getBoardText(maybeboard)));
+updateTab(acquireTab, 'Acquireboard', getCardCount(getBoardText(acquireboard)));
 
 mainboard.keyup(function() {
-  updateMainTab(getCardCount(getMainboardText()));
+  updateTab(maybeTab, 'Mainboard', getCardCount(getBoardText(mainboard)));
+});
+
+sideboard.keyup(function() {
+  updateTab(sideTab, 'Sideboard', getCardCount(getBoardText(sideboard)));
+});
+
+maybeboard.keyup(function() {
+  updateTab(maybeTab, 'Maybeboard', getCardCount(getBoardText(maybeboard)));
+});
+
+acquireboard.keyup(function() {
+  updateTab(acquireTab, 'Acquireboard', getCardCount(getBoardText(acquireboard)));
 });
