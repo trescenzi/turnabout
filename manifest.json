@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "untapped",
-  "version": "0.0",
+  "name": "turnabout",
+  "version": "0.0.1",
   "content_scripts": [
     {
       "matches": [
