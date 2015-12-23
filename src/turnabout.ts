@@ -7,7 +7,7 @@ var maybeboard = $('textarea#id_maybeboard');
 var maybeTab = $('label[for="id_maybeboard"]');
 var acquireboard = $('textarea#id_acquireboard');
 var acquireTab = $('label[for="id_acquireboard"]');
-var CARD_REGEX = /(\d?).*/;
+var CARD_REGEX = /(\d*).*/;
 
 function getBoardText(board: JQuery) {
   return _.map(board.val().split('\n'), _.trim);
