@@ -1,7 +1,9 @@
 # Turnabout - The best way to untap
 
 ## Features
-  - Live Mainboard Card Counts
+### Live Card Counts
+
+![card counts](https://raw.githubusercontent.com/trescenzi/i/master/card_count.gif)
 
 More are coming! Tournabout is currently is alpha.
 
