@@ -34,7 +34,7 @@ updateTab(maybeTab, 'Maybeboard', getCardCount(getBoardText(maybeboard)));
 updateTab(acquireTab, 'Acquireboard', getCardCount(getBoardText(acquireboard)));
 
 mainboard.keyup(function() {
-  updateTab(maybeTab, 'Mainboard', getCardCount(getBoardText(mainboard)));
+  updateTab(mainTab, 'Mainboard', getCardCount(getBoardText(mainboard)));
 });
 
 sideboard.keyup(function() {
