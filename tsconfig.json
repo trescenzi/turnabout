@@ -3,10 +3,11 @@
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "out": "dist/turnabout.js",
+        "outFile": "dist/turnabout.js",
         "sourceMap": true
     },
     "files": [
+      "src/card-count.ts",
       "src/turnabout.ts"
     ]
 }
