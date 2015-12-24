@@ -1,5 +1,5 @@
 /// <reference path="../typings/tsd.d.ts" />
-const CARD_REGEX = /(\d*).*/;
+const CARD_REGEX: RegExp = /(\d*).*/;
 class Board {
   private tab: JQuery;
   private textArea: JQuery;
@@ -22,12 +22,12 @@ class Board {
   }
 
   getCardCount(): number {
-    return _.reduce(this.getBoardText(), function(sum, card) {
+    return _.reduce(this.getBoardText(), (sum: number, card: string) => {
       if (card.length === 0 ) {
         return sum;
       }
 
-      var cardCount = CARD_REGEX.exec(card)[1];
+      const cardCount: string = CARD_REGEX.exec(card)[1];
       return sum + (cardCount === '' ? 1 : parseInt(cardCount));
     }, 0);
   }
